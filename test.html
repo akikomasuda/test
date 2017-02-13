@@ -1,1 +1,503 @@
-test
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <div class="note-wrapper">
+      <h1>Frontend guideline</h1>
+      <h2>Introduction </h2>
+      <h3>How to use this document </h3>
+      <p>This document is a model of the coding standards defined in the project, so you do not need to code everything accordingly.</p>
+      <p>Please read this agreement before development begins and create coding standards for each project as necessary.</p>
+      <p>Please manage the coding rules you create with github etc and share it to members.</p>
+      <br>
+      <h3>Purpose of preparing coding convention </h3>
+      <ul>
+        <li>To keep the code easy to understand </li>
+        <li>To match recognition with members of the project </li>
+        <li>To facilitate handover when members change </li>
+      </ul>
+      <h2>Directory structure </h2>
+      <p>------------- ↓ Please change to the project directory structure ↓ -------------</p>
+      <pre><code class='code-multiline'>(Example)
+├── view
+│   ├── index.html
+│   └── hoge.html
+├── assets
+│   ├── babel
+│   │   ├── core.js　common javascript
+│   │   ├── page　Javascript per page
+│   │   └── plugin
+│   ├── image
+│   │   ├── common　Image used for multiple pages
+│   │   └── page Image used for each page
+│   └── stylus
+│       ├── reset.css　Reset browser style
+│       ├── core.css　Import a common css
+│       ├── element　Button, check box, etc. Small unit module
+│       └── page　CSS per page
+├── bower.json
+├── gulpfile.coffee
+└── package.json
+</code></pre>
+      <p>Reference：Directory structure Output method:</p>
+      <p>Mac:
+        <a href="https://myshittycode.com/2013/10/07/tree-command-on-mac-os-x/">https://myshittycode.com/2013/10/07/tree-command-on-mac-os-x/</a>
+      </p>
+      <p>Windows:
+        <a href="http://www.computerhope.com/treehlp.htm">http://www.computerhope.com/treehlp.htm</a>
+      </p>
+      <br>
+      <p>------------- ↑ Please change to the project directory structure ↑ -------------</p>
+      <br>
+      <br>
+      <h2>Overall Rule</h2>
+      <h3>About external files</h3>
+      <ul>
+        <li>In principle, javascript, CSS etc. are converted to external files </li>
+      </ul>
+      <h3>Writing a path</h3>
+      <ul>
+        <li>In principle, links and images are described by root relative path </li>
+        <li>Because favicon may not display images, describe it by absolute path </li>
+      </ul>
+      <h3>Indent</h3>
+      <ul>
+        <li>Use two halfwidth spaces for both HTML, CSS, and JavaScript </li>
+      </ul>
+      <h3>Insert comment</h3>
+      <ul>
+        <li>Insert comments as needed </li>
+      </ul>
+      <h2>Naming convention</h2>
+      <h3>Directory name</h3>
+      <ul>
+        <li>Basically directory names use lowercase letters </li>
+        <li>Make it a name based on English words </li>
+        <li>Together with the notation of snake case or camel case or kebab case </li>
+      </ul>
+      <br>
+      <br>
+      <h2>HTML</h2>
+      <h3>Basic rules (SEO edition)</h3>
+      <ul>
+        <li>Disable use of hidden text (hide in CSS) and hidden links (tooltips etc. are fine) </li>
+        <li>Always set the alt attribute for images. (However, alt = "" for images not related to documents) </li>
+      </ul>
+      <h3>HTML Basic Rule</h3>
+      <ul>
+        <li>DOCTYPE is based on "HTML 5" </li>
+        <li>Character code is basic "utf-8" </li>
+        <li>All tags and attributes are written in lower case </li>
+        <li>Enclose attribute values &#8203;&#8203;in double quotation marks </li>
+      </ul>
+      <h3>Inscription</h3>
+      <ul>
+        <li>id </li>
+      </ul>
+      <ul class='todo-list'>
+        <li>
+          <span class='todo-checkbox todo-checked'>
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" fill="#FFF"/>
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" stroke="#B4B4B4"/>
+                <path d="M12.526 4.615L6.636 9.58l-2.482-.836c-.19-.06-.408.003-.518.15-.116.15-.106.352.026.495l2.722 2.91c.086.09.21.144.34.144h.046c.12-.013.234-.07.307-.156l6.1-7.125c.143-.166.123-.407-.046-.548-.164-.138-.435-.14-.604 0z" id="check" fill="#555"/>
+              </g>
+            </svg>
+          </span>
+          <span class='todo-text'>camelCase</span>
+        </li>
+        <li>
+          <span class='todo-checkbox '>
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" fill="#FFF"/>
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" stroke="#B4B4B4"/>
+                <path d="M12.526 4.615L6.636 9.58l-2.482-.836c-.19-.06-.408.003-.518.15-.116.15-.106.352.026.495l2.722 2.91c.086.09.21.144.34.144h.046c.12-.013.234-.07.307-.156l6.1-7.125c.143-.166.123-.407-.046-.548-.164-.138-.435-.14-.604 0z" id="check" fill="#555"/>
+              </g>
+            </svg>
+          </span>
+          <span class='todo-text'>snake_case</span>
+        </li>
+        <li>
+          <span class='todo-checkbox '>
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" fill="#FFF"/>
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" stroke="#B4B4B4"/>
+                <path d="M12.526 4.615L6.636 9.58l-2.482-.836c-.19-.06-.408.003-.518.15-.116.15-.106.352.026.495l2.722 2.91c.086.09.21.144.34.144h.046c.12-.013.234-.07.307-.156l6.1-7.125c.143-.166.123-.407-.046-.548-.164-.138-.435-.14-.604 0z" id="check" fill="#555"/>
+              </g>
+            </svg>
+          </span>
+          <span class='todo-text'>kebab-case</span>
+        </li>
+      </ul>
+      <ul>
+        <li>class </li>
+      </ul>
+      <ul class='todo-list'>
+        <li>
+          <span class='todo-checkbox '>
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" fill="#FFF"/>
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" stroke="#B4B4B4"/>
+                <path d="M12.526 4.615L6.636 9.58l-2.482-.836c-.19-.06-.408.003-.518.15-.116.15-.106.352.026.495l2.722 2.91c.086.09.21.144.34.144h.046c.12-.013.234-.07.307-.156l6.1-7.125c.143-.166.123-.407-.046-.548-.164-.138-.435-.14-.604 0z" id="check" fill="#555"/>
+              </g>
+            </svg>
+          </span>
+          <span class='todo-text'>camelCase</span>
+        </li>
+        <li>
+          <span class='todo-checkbox '>
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" fill="#FFF"/>
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" stroke="#B4B4B4"/>
+                <path d="M12.526 4.615L6.636 9.58l-2.482-.836c-.19-.06-.408.003-.518.15-.116.15-.106.352.026.495l2.722 2.91c.086.09.21.144.34.144h.046c.12-.013.234-.07.307-.156l6.1-7.125c.143-.166.123-.407-.046-.548-.164-.138-.435-.14-.604 0z" id="check" fill="#555"/>
+              </g>
+            </svg>
+          </span>
+          <span class='todo-text'>snake_case</span>
+        </li>
+        <li>
+          <span class='todo-checkbox todo-checked'>
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" fill="#FFF"/>
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" stroke="#B4B4B4"/>
+                <path d="M12.526 4.615L6.636 9.58l-2.482-.836c-.19-.06-.408.003-.518.15-.116.15-.106.352.026.495l2.722 2.91c.086.09.21.144.34.144h.046c.12-.013.234-.07.307-.156l6.1-7.125c.143-.166.123-.407-.046-.548-.164-.138-.435-.14-.604 0z" id="check" fill="#555"/>
+              </g>
+            </svg>
+          </span>
+          <span class='todo-text'>kebab-case</span>
+        </li>
+      </ul>
+      <ul>
+        <li>属性 </li>
+      </ul>
+      <ul class='todo-list'>
+        <li>
+          <span class='todo-checkbox '>
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" fill="#FFF"/>
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" stroke="#B4B4B4"/>
+                <path d="M12.526 4.615L6.636 9.58l-2.482-.836c-.19-.06-.408.003-.518.15-.116.15-.106.352.026.495l2.722 2.91c.086.09.21.144.34.144h.046c.12-.013.234-.07.307-.156l6.1-7.125c.143-.166.123-.407-.046-.548-.164-.138-.435-.14-.604 0z" id="check" fill="#555"/>
+              </g>
+            </svg>
+          </span>
+          <span class='todo-text'>camelCase</span>
+        </li>
+        <li>
+          <span class='todo-checkbox todo-checked'>
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" fill="#FFF"/>
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" stroke="#B4B4B4"/>
+                <path d="M12.526 4.615L6.636 9.58l-2.482-.836c-.19-.06-.408.003-.518.15-.116.15-.106.352.026.495l2.722 2.91c.086.09.21.144.34.144h.046c.12-.013.234-.07.307-.156l6.1-7.125c.143-.166.123-.407-.046-.548-.164-.138-.435-.14-.604 0z" id="check" fill="#555"/>
+              </g>
+            </svg>
+          </span>
+          <span class='todo-text'>snake_case</span>
+        </li>
+        <li>
+          <span class='todo-checkbox '>
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" fill="#FFF"/>
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" stroke="#B4B4B4"/>
+                <path d="M12.526 4.615L6.636 9.58l-2.482-.836c-.19-.06-.408.003-.518.15-.116.15-.106.352.026.495l2.722 2.91c.086.09.21.144.34.144h.046c.12-.013.234-.07.307-.156l6.1-7.125c.143-.166.123-.407-.046-.548-.164-.138-.435-.14-.604 0z" id="check" fill="#555"/>
+              </g>
+            </svg>
+          </span>
+          <span class='todo-text'>kebab-case</span>
+        </li>
+      </ul>
+      <h3>W3C compliant</h3>
+      <ul>
+        <li>Describe W3C Valid description except for implementation reasons </li>
+      </ul>
+      <h3>title</h3>
+      <ul>
+        <li>The page title is described according to the content of the contents of the page </li>
+        <li>Describe in ascending order from the subordinate directory to the site top page </li>
+      </ul>
+      <p>(Example) </p>
+      <pre><code class='code-multiline'>&lt;title&gt; News｜Lab Inc. &lt;/title&gt;
+</code></pre>
+      <h3>description</h3>
+      <ul>
+        <li>Based on the number of characters displayed in the search result, specify contents of about 120 full-width characters. </li>
+      </ul>
+      <h3>mail address</h3>
+      <p>The markup of the mail address describes the encoded one</p>
+      <p>(Example)</p>
+      <pre><code class='code-multiline'>&lt;a href="m&#97;i&#108;t&#111;:&#116;&#101;s&#116;&#64;&#116;est&#46;c&#111;m"&gt;&#116;&#101;s&#116;&#64;&#116;est&#46;c&#111;m&lt;/a&gt;
+</code></pre>
+      <h2>CSS</h2>
+      <h3>Basic rules</h3>
+      <ul>
+        <li>CSS hacks are kept to the minimum necessary and not used as much as possible </li>
+        <li>important! Not to use except when absolutely necessary </li>
+      </ul>
+      <h3>Unit</h3>
+      <ul>
+        <li>Unify description of line-height </li>
+      </ul>
+      <ul class='todo-list'>
+        <li>
+          <span class='todo-checkbox '>
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" fill="#FFF"/>
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" stroke="#B4B4B4"/>
+                <path d="M12.526 4.615L6.636 9.58l-2.482-.836c-.19-.06-.408.003-.518.15-.116.15-.106.352.026.495l2.722 2.91c.086.09.21.144.34.144h.046c.12-.013.234-.07.307-.156l6.1-7.125c.143-.166.123-.407-.046-.548-.164-.138-.435-.14-.604 0z" id="check" fill="#555"/>
+              </g>
+            </svg>
+          </span>
+          <span class='todo-text'>px</span>
+        </li>
+        <li>
+          <span class='todo-checkbox '>
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" fill="#FFF"/>
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" stroke="#B4B4B4"/>
+                <path d="M12.526 4.615L6.636 9.58l-2.482-.836c-.19-.06-.408.003-.518.15-.116.15-.106.352.026.495l2.722 2.91c.086.09.21.144.34.144h.046c.12-.013.234-.07.307-.156l6.1-7.125c.143-.166.123-.407-.046-.548-.164-.138-.435-.14-.604 0z" id="check" fill="#555"/>
+              </g>
+            </svg>
+          </span>
+          <span class='todo-text'>Unit none</span>
+        </li>
+      </ul>
+      <ul>
+        <li>Unit of font-size unit </li>
+      </ul>
+      <ul class='todo-list'>
+        <li>
+          <span class='todo-checkbox '>
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" fill="#FFF"/>
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" stroke="#B4B4B4"/>
+                <path d="M12.526 4.615L6.636 9.58l-2.482-.836c-.19-.06-.408.003-.518.15-.116.15-.106.352.026.495l2.722 2.91c.086.09.21.144.34.144h.046c.12-.013.234-.07.307-.156l6.1-7.125c.143-.166.123-.407-.046-.548-.164-.138-.435-.14-.604 0z" id="check" fill="#555"/>
+              </g>
+            </svg>
+          </span>
+          <span class='todo-text'>px</span>
+        </li>
+        <li>
+          <span class='todo-checkbox '>
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" fill="#FFF"/>
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" stroke="#B4B4B4"/>
+                <path d="M12.526 4.615L6.636 9.58l-2.482-.836c-.19-.06-.408.003-.518.15-.116.15-.106.352.026.495l2.722 2.91c.086.09.21.144.34.144h.046c.12-.013.234-.07.307-.156l6.1-7.125c.143-.166.123-.407-.046-.548-.164-.138-.435-.14-.604 0z" id="check" fill="#555"/>
+              </g>
+            </svg>
+          </span>
+          <span class='todo-text'>rem</span>
+        </li>
+        <li>
+          <span class='todo-checkbox '>
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" fill="#FFF"/>
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" stroke="#B4B4B4"/>
+                <path d="M12.526 4.615L6.636 9.58l-2.482-.836c-.19-.06-.408.003-.518.15-.116.15-.106.352.026.495l2.722 2.91c.086.09.21.144.34.144h.046c.12-.013.234-.07.307-.156l6.1-7.125c.143-.166.123-.407-.046-.548-.164-.138-.435-.14-.604 0z" id="check" fill="#555"/>
+              </g>
+            </svg>
+          </span>
+          <span class='todo-text'>em</span>
+        </li>
+        <li>
+          <span class='todo-checkbox '>
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" fill="#FFF"/>
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" stroke="#B4B4B4"/>
+                <path d="M12.526 4.615L6.636 9.58l-2.482-.836c-.19-.06-.408.003-.518.15-.116.15-.106.352.026.495l2.722 2.91c.086.09.21.144.34.144h.046c.12-.013.234-.07.307-.156l6.1-7.125c.143-.166.123-.407-.046-.548-.164-.138-.435-.14-.604 0z" id="check" fill="#555"/>
+              </g>
+            </svg>
+          </span>
+          <span class='todo-text'>vw</span>
+        </li>
+      </ul>
+      <br>
+      <h2>Javascript</h2>
+      <h3>Basic rules</h3>
+      <ul>
+        <li>Definition in global space is not basically done </li>
+        <li>Make it a class name like '.js-hoge' for class used in Javascript </li>
+      </ul>
+      <br>
+      <h2>Image</h2>
+      <ul>
+        <li>Maximize weight reduction without deterioration by using compression tool </li>
+        <li>Do not use online compression services such as TinyPNG except images that may leak </li>
+      </ul>
+      <p>reference:</p>
+      <p>
+        <a href="https://imageoptim.com/mac?__hstc=150021993.d1daf82639ea98944b80adce1d52e034.1473756063927.1473756063928.1473762389074.3&__hssc=150021993.1.1473762389074&__hsfp=298237753">ImageOptim</a>You can delete unnecessary meta information of images
+      </p>
+      <p>
+        <a href="https://pngmini.com/?__hstc=150021993.d1daf82639ea98944b80adce1d52e034.1473756063927.1473756063928.1473762389074.3&__hssc=150021993.1.1473762389074&__hsfp=298237753">ImageAlpha</a>You can reduce the number of colors in the image
+      </p>
+      <p>
+        <a href="https://www.npmjs.com/package/imagemin-jpegtran">jpegtran</a>Npm package that can compress jpg
+      </p>
+      <p>
+        <a href="https://www.npmjs.com/package/imagemin-optipng">optipng</a>Png compression file capable npm package
+      </p>
+      <br>
+      <ul>
+        <li>Use JPEG, PNG, and GIF properly </li>
+      </ul>Reference: Using images properly When it is necessary to transmit the background → png For images with few colors, such as diagrams, line drawings, etc. → png Pictures, images with gradation, etc., when the number of colors is large → jpg Loading image etc. → gif
+      <ul>
+        <li>Make an image read first if necessary. </li>
+        <li>Sprites are created by basic engineers. </li>
+      </ul>
+      <p>reference：
+        <a href="http://compass-style.org/reference/compass/utilities/sprites/sprite_img/">http://compass-style.org/</a>
+      </p>
+      <br>
+      <h2>CSS, JS file compression, obfuscation</h2>
+      <ul>
+        <li>CSS, and JS files are compressed and obfuscated (in the development environment, those who do not compress them are easier to debug, so only the production environment is compressed) </li>
+      </ul>example：
+      <a href="https://www.npmjs.com/package/gulp-uglify">gulp-uglify</a>
+      <a href="https://www.npmjs.com/package/gulp-cssmin">gulp-cssmin</a>
+      <h2>Smartphone site coding</h2>
+      <h3>Basic rules</h3>
+      <ul>
+        <li>When providing content with the same contents as PC version for smartphone, put the rel = "canonical" tag indicating it </li>
+      </ul>
+      <h3>General Markup</h3>
+      <ul>
+        <li>The resolution is based on 1334 x 750, but implements it in a responsive layout or liquid layout so as not to collapse even at terminals with other resolutions </li>
+      </ul>
+      <p>Reference:
+        <a href="http://blog.teamtreehouse.com/which-page-layout">http://blog.teamtreehouse.com/which-page-layout</a>
+      </p>
+      <br>
+      <br>
+      <h3>viewport</h3>
+      <ul>
+        <li>Unless otherwise specified, it is as follows </li>
+      </ul>
+      <pre><code class='code-multiline'>&lt;meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"&gt;
+</code></pre>
+      <ul>
+        <li>In order to control the telephone call with numeral link, we also write the following description as necessary </li>
+      </ul>
+      <pre><code class='code-multiline'>&lt;meta name="format-detection" content="telephone=no"&gt;
+</code></pre>
+      <h3>Image</h3>
+      <ul>
+        <li>Specify the image as 1/2 size (Retina compatible) </li>
+      </ul>
+      <h3>font size</h3>
+      <ul>
+        <li>The lower limit of the font size is 10px </li>
+      </ul>
+      <h2>Class design</h2>
+      <ul class='todo-list'>
+        <li>
+          <span class='todo-checkbox '>
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" fill="#FFF"/>
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" stroke="#B4B4B4"/>
+                <path d="M12.526 4.615L6.636 9.58l-2.482-.836c-.19-.06-.408.003-.518.15-.116.15-.106.352.026.495l2.722 2.91c.086.09.21.144.34.144h.046c.12-.013.234-.07.307-.156l6.1-7.125c.143-.166.123-.407-.046-.548-.164-.138-.435-.14-.604 0z" id="check" fill="#555"/>
+              </g>
+            </svg>
+          </span>
+          <span class='todo-text'>
+            <a href="http://getbem.com/naming/">BEM</a>
+          </span>
+        </li>
+        <li>
+          <span class='todo-checkbox '>
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" fill="#FFF"/>
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" stroke="#B4B4B4"/>
+                <path d="M12.526 4.615L6.636 9.58l-2.482-.836c-.19-.06-.408.003-.518.15-.116.15-.106.352.026.495l2.722 2.91c.086.09.21.144.34.144h.046c.12-.013.234-.07.307-.156l6.1-7.125c.143-.166.123-.407-.046-.548-.164-.138-.435-.14-.604 0z" id="check" fill="#555"/>
+              </g>
+            </svg>
+          </span>
+          <span class='todo-text'>
+            <a href="https://smacss.com/">SMACCS</a>
+          </span>
+        </li>
+        <li>
+          <span class='todo-checkbox '>
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" fill="#FFF"/>
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" stroke="#B4B4B4"/>
+                <path d="M12.526 4.615L6.636 9.58l-2.482-.836c-.19-.06-.408.003-.518.15-.116.15-.106.352.026.495l2.722 2.91c.086.09.21.144.34.144h.046c.12-.013.234-.07.307-.156l6.1-7.125c.143-.166.123-.407-.046-.548-.164-.138-.435-.14-.604 0z" id="check" fill="#555"/>
+              </g>
+            </svg>
+          </span>
+          <span class='todo-text'>
+            <a href="http://oocss.org/">OOCSS</a>
+          </span>
+        </li>
+        <li>
+          <span class='todo-checkbox '>
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" fill="#FFF"/>
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" stroke="#B4B4B4"/>
+                <path d="M12.526 4.615L6.636 9.58l-2.482-.836c-.19-.06-.408.003-.518.15-.116.15-.106.352.026.495l2.722 2.91c.086.09.21.144.34.144h.046c.12-.013.234-.07.307-.156l6.1-7.125c.143-.166.123-.407-.046-.548-.164-.138-.435-.14-.604 0z" id="check" fill="#555"/>
+              </g>
+            </svg>
+          </span>
+          <span class='todo-text'>
+            <a href="https://github.com/hiloki/flocss">FLOCSS</a>
+          </span>
+        </li>
+        <li>
+          <span class='todo-checkbox '>
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <g fill="none" fill-rule="evenodd">
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" fill="#FFF"/>
+                <path d="M.5 12.853c0 1.462 1.185 2.647 2.647 2.647h9.706c1.462 0 2.647-1.185 2.647-2.647V3.147C15.5 1.685 14.315.5 12.853.5H3.147C1.685.5.5 1.685.5 3.147v9.706z" stroke="#B4B4B4"/>
+                <path d="M12.526 4.615L6.636 9.58l-2.482-.836c-.19-.06-.408.003-.518.15-.116.15-.106.352.026.495l2.722 2.91c.086.09.21.144.34.144h.046c.12-.013.234-.07.307-.156l6.1-7.125c.143-.166.123-.407-.046-.548-.164-.138-.435-.14-.604 0z" id="check" fill="#555"/>
+              </g>
+            </svg>
+          </span>
+          <span class='todo-text'>Other</span>
+        </li>
+      </ul>
+      <ul>
+        <li>Ensure that css is a common part used in two or more screens or a CSS that is affected only in a specific page </li>
+      </ul>
+      <p>(Example)</p>
+      <p>Common button</p>
+      <p>.bl-button</p>
+      <br>
+      <p>Button used only for specific paged</p>
+      <p>.project-button</p>
+      <br>
+      <p>Reference：</p>
+      <p>
+        <a href="https://www.youtube.com/watch?v=IKFq2cSbQ4Q">Organizing CSS with OOCSS, SMACSS, and BEM - Matt Stauffer</a>
+      </p>
+      <p>Todo: 英語じゃない</p>
+      <p>
+        <a href="https://github.com/hiloki/flocss">flocss</a>
+      </p>
+    </div>
+    <style>
+            html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;font-size:100%;vertical-align:baseline}html{line-height:1}ol,ul{list-style:none}table{border-collapse:collapse;border-spacing:0}caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}q,blockquote{quotes:none}q:before,q:after,blockquote:before,blockquote:after{content:"";content:none}a img{border:none}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}*{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}html{font-size:87.5%;line-height:1.57143em}html{font-size:14px;line-height:1.6em;-webkit-text-size-adjust:100%}body{background:#fcfcfc;color:#545454;text-rendering:optimizeLegibility;font-family:"Avenir-Book"}a{color:#de4c4f;text-decoration:none}h1{font-family:"Avenir-Medium";color:#333;font-size:1.6em;line-height:1.3em;margin-bottom:.78571em}h2{font-family:"Avenir-Medium";color:#333;font-size:1.3em;line-height:1em;margin-bottom:.62857em}h3{font-family:"Avenir-Medium";color:#333;font-size:1.15em;line-height:1em;margin-bottom:.47143em}p{margin-bottom:1.57143em;hyphens:auto}hr{height:1px;border:0;background-color:#dedede;margin:-1px auto 1.57143em auto}ul,ol{margin-bottom:1.57143em}ul ul,ul ol,ol ul,ol ol{margin-bottom:0px}b,strong{font-family:"Avenir-Heavy"}i,em{font-family:"Avenir-BookOblique"}code{font-family:"Menlo-Regular"}.text-overflow-ellipsis{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.note-wrapper{max-width:46em;margin:0px auto;padding:1.57143em 3.14286em}.note-wrapper.spotlight-preview{overflow-x:hidden}u{text-decoration:none;background-image:linear-gradient(to bottom, rgba(0,0,0,0) 50%,#e06e73 50%);background-repeat:repeat-x;background-size:2px 2px;background-position:0 1.05em}s{color:#878787}p{margin-bottom:0.1em}hr{margin-bottom:0.7em;margin-top:0.7em}ul li{text-indent:-0.6em}ul li:before{content:"&#8226;";color:#e06e73;display:inline-block;margin-right:0.3em}ul ul{margin-left:1.25714em}ol li{text-indent:-1.25em}ol ol{margin-left:1.25714em}blockquote{display:block;margin-left:-1em;padding-left:0.8em;border-left:0.2em solid #e06e73}.todo-list ul{margin-left:1.88571em}.todo-list li{text-indent:-1.75em}.todo-list li:before{content:"";display:static;margin-right:0px}.todo-checkbox{text-indent:-1.7em}.todo-checkbox svg{margin-right:0.3em;position:relative;top:0.2em}.todo-checkbox svg #check{display:none}.todo-checkbox.todo-checked #check{display:inline}.todo-checkbox.todo-checked .todo-text{text-decoration:line-through;color:#878787}.code-inline{display:inline-block;background:white;border:solid 1px #dedede;padding:0.0em 0.5em;font-size:0.9em}.code-multiline{display:block;background:white;border:solid 1px #dedede;padding:0.7em 1em;font-size:0.9em;overflow-x:auto}.hashtag{display:inline-block;color:white;background:#b8bfc2;padding:0.0em 0.5em;border-radius:1em}.hashtag a{color:#fff}.address a{color:#545454;background-image:linear-gradient(to bottom, rgba(0,0,0,0) 50%,#0da35e 50%);background-repeat:repeat-x;background-size:2px 2px;background-position:0 1.05em}.address svg{position:relative;top:0.2em;display:inline-block;margin-right:0.2em}.color-preview{display:inline-block;width:1em;height:1em;border:solid 1px rgba(0,0,0,0.3);border-radius:50%;margin-right:0.1em;position:relative;top:0.2em;white-space:nowrap}.color-code{margin-right:0.2em;font-family:"Menlo-Regular";font-size:0.9em}.color-hash{opacity:0.4}.ordered-list-number{color:#e06e73;text-align:right;display:inline-block;min-width:1em}.arrow svg{position:relative;top:0.08em;display:inline-block;margin-right:0.15em;margin-left:0.15em}.arrow svg #rod{stroke:#545454}.arrow svg #point{fill:#545454}img{max-width:100%;height:auto}
+
+        </style>
+  </body>
+</html>
